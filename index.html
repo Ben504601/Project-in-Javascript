@@ -7,10 +7,51 @@
 </head>
 <body>
     <h1>Javascript</h1>
-    <p id="demo">demo</p>
-    <scrip>
-        document.getElementById('demo').innerHTML = "Hello World"
-        
-    </scrip>
+    <p id="demo" class="test"></p>
+    <p id="counter"></p>
+    <p id="name">Who am I?</p>
+    <p id="cars">Cars</p>
+    <ul>
+        <li class="car">
+
+        </li>
+    </ul>
+    <!-- <button id="change-color" onmouseover="getTime()">Get current time</button>
+    <button onclick="changeName('Nino')">Change Name</button> -->
+    <button onclick="generateCars()">Generate Cars</button>
+    <script>
+        // document.getElementById('test')[0].innerHTML = "Hello World"
+        let demo = document.getElementById('demo');
+        let counter = document.getElementById('counter');
+        let nameElement = document.getdocumentById('name');
+        let carElement = document.getElementById('cars');
+        let count = 0;
+        let text = "";
+        let cars = ("BMW", "Toyota", "Honda");
+        // function getTime() {
+        //     // document.getElementById('demo').style.color = "blue"
+        //     // window.location.href = ";
+        //     let date = new Date();
+        //     demo.innerHTML = date;
+        //     counter.innerHTML = count;
+        // }
+        // function changeName(name) {
+        //     //nameElement.innerHTML = name;
+        //     if(name == 'John Doe') {
+        //         nameElement.innerHTML = 'Nino'
+        //     } else if(name == 'Nino') {
+        //         nameElement.innerHTML = 'John Doe'
+        //     } else {
+        //         nameElement.innerHTML = 'Brad Pitt'
+        //     }
+        // }
+        function generateCars() {
+            //cars.innerHTML = cars;
+            for(let i = 0; i < cars.length; i++) {
+                text += cars[i] + "<br>";
+            }
+            carElement.innerHTML = text;
+        }
+    </script>
 </body>
 </html>
